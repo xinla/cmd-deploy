@@ -2,25 +2,11 @@
 
 前端命令行自动化一键部署工具，支持测试、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
 
-## git 地址：
-
-https://github.com/xinla/cmd-deploy
-
-## npm 地址：
-
-https://www.npmjs.com/package/cmd-deploy
-
 ## 适用对象
 
 目前采用手动部署又期望快速实现轻量化部署的团队或者个人
 
-## 使用指南
-
-https://github.com/xinla/cmd-deploy/master/README.md
-
-## 前提条件
-
-能通过 ssh 连上服务器
+前提条件：能通过 ssh 连上服务器
 
 ## 安装
 
@@ -58,33 +44,33 @@ deploy init
 
 ```js
 export default {
-	privateKey: '', // 本地私钥地址，位置一般在C:/Users/xxx/.ssh/id_rsa，非必填，有私钥则配置
-	passphrase: '', // 本地私钥密码，非必填，有私钥则配置
-	projectName: '', // 项目名称
-	// 根据需要进行配置，如只需部署prod线上环境，可删除dev测试环境配置，反之亦然，支持多环境部署，再有多余的环境按照下面格式写即可
-	// 以下为示例配置，请在实际使用时根据实际情况进行配置
-	dev: {
-		// 测试环境
-		name: '测试环境',
-		script: 'npm run build:dev', // 测试环境打包脚本
-		host: '139.224.22.228', // 测试服务器地址
-		port: 22, // ssh 端口，一般默认22
-		username: 'root', // 登录服务器用户名
-		password: '123456', // 登录服务器密码
-		distPath: 'dist', // 本地打包dist目录
-		webDir: '/usr/local/nginx/html/prod/pc', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc
-	},
-	prod: {
-		// 线上环境
-		name: '线上环境',
-		script: 'npm run build', // 线上环境打包脚本
-		host: '139.224.22.228', // 测试服务器地址
-		port: 22, // ssh 端口，一般默认22
-		username: 'root', // 登录服务器用户名
-		password: '123456', // 登录服务器密码
-		distPath: 'dist', // 本地打包dist目录
-		webDir: '/usr/local/nginx/html/prod/pc', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc
-	},
+  privateKey: '', // 本地私钥地址，位置一般在C:/Users/xxx/.ssh/id_rsa，非必填，有私钥则配置
+  passphrase: '', // 本地私钥密码，非必填，有私钥则配置
+  projectName: '', // 项目名称
+  // 根据需要进行配置，如只需部署prod线上环境，可删除dev测试环境配置，反之亦然，支持多环境部署，再有多余的环境按照下面格式写即可
+  // 以下为示例配置，请在实际使用时根据实际情况进行配置
+  dev: {
+    // 测试环境
+    name: '测试环境',
+    script: 'npm run build:dev', // 测试环境打包脚本
+    host: '139.224.22.228', // 测试服务器地址
+    port: 22, // ssh 端口，一般默认22
+    username: 'root', // 登录服务器用户名
+    password: '123456', // 登录服务器密码
+    distPath: 'dist', // 本地打包dist目录
+    webDir: '/usr/local/nginx/html/prod/pc', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc
+  },
+  prod: {
+    // 线上环境
+    name: '线上环境',
+    script: 'npm run build', // 线上环境打包脚本
+    host: '139.224.22.228', // 测试服务器地址
+    port: 22, // ssh 端口，一般默认22
+    username: 'root', // 登录服务器用户名
+    password: '123456', // 登录服务器密码
+    distPath: 'dist', // 本地打包dist目录
+    webDir: '/usr/local/nginx/html/prod/pc', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc
+  },
 }
 ```
 
