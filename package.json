@@ -1,6 +1,6 @@
 {
   "name": "cmd-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "前端命令行一键部署工具。A cli tool for web deploy.",
   "type": "module",
   "import": "json",
