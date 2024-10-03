@@ -5,7 +5,7 @@ import inquirer from 'inquirer'
 import { program } from 'commander'
 // import packageJson from '../package.json' assert { type: 'json' }
 const deployPath = path.join(process.cwd(), './deploy')
-const configPath = `${deployPath}/deploy.config.js`
+const configPath = `${deployPath}/deploy.config.mjs`
 import { checkNodeVersion, checkDeployConfig, underlineLog } from '../utils/index.js'
 
 const jsonData = fs.readFileSync(path.join(import.meta.dirname, '../package.json'), 'utf8')

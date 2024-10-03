@@ -68,10 +68,10 @@ export default {
     port: 22, // ssh 端口，一般默认22
     username: 'root', // 登录服务器用户名
     password: '123456', // 登录服务器密码
-    script: '', // 本地打包脚本
-    distPath: '', // 本地打包dist目录
-    webDir: '', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc
-    remoteCommand: ['cd /usr/local/nest/admin', './bin/build.sh'], // 远程服务器执行的命令
+    script: '', // 本地打包脚本，需要打包则配置，如无需打包则为空或不配置即可
+    distPath: '', // 本地打包dist目录，同上，需要上传本地打包文件即配置，不需上传则不配置
+    webDir: '', // 服务器文件部署地址示例： /usr/local/nginx/html/prod/pc， 同上，按需配置
+    remoteCommand: ['cd /usr/local/nest/admin', './bin/build.sh'], // 远程服务器执行的命令，一般用于后端服务部署后的启动命令，同上，按需配置
   },
 }
 ```
