@@ -4,20 +4,20 @@ import semver from 'semver'
 
 const DEPLOY_SCHEMA = {
   name: '',
-  script: '',
+  // script: '',
   host: '',
   port: 22,
   username: '',
   password: '',
-  webDir: '',
+  // webDir: '',
 }
 
 const PRIVATE_KEY_DEPLOY_SCHEMA = {
   name: '',
-  script: '',
+  // script: '',
   host: '',
   port: 22,
-  webDir: '',
+  // webDir: '',
 }
 
 // 开始部署日志
@@ -95,9 +95,9 @@ async function checkDeployConfig(deployConfigPath) {
     const configs = []
     for (let key of keys) {
       if (config[key] instanceof Object) {
-        if (!checkConfigScheme(key, config[key], privateKey)) {
-          return false
-        }
+        // if (!checkConfigScheme(key, config[key], privateKey)) {
+        //   return false
+        // }
         config[key].command = key
         config[key].privateKey = privateKey
         config[key].passphrase = passphrase
