@@ -1,6 +1,6 @@
 # cmd-deploy
 
-命令行一键自动化部署工具，支持前后端部署，支持测试、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
+前后端命令行一键自动化部署工具，支持测试、线上等多环境部署，支持环境配置扩展，配置完成后仅需一条命令即可完成整个部署流程。
 
 ## 适用对象
 
@@ -26,18 +26,18 @@ deploy -V
 
 ### 1. 初始化部署模板
 
-进入项目根目录下执行初始化命令，会在当前目录下生成 deploy 文件夹，里面包含 deploy.config.js 配置文件，配置好后仅需一条命令即可完成整个部署流程。
+进入项目根目录下执行初始化命令，会在当前目录下生成 deploy 文件夹，里面包含 deploy.config.mjs 配置文件，配置好后仅需一条命令即可完成整个部署流程。
 
 ```sh
 deploy init
 
-# 板创建成功，文件位置：deploy/deploy.config.js
-# 请配置 deploy 目录下的 deploy.config.js 配置文件
+# 板创建成功，文件位置：deploy/deploy.config.mjs
+# 请配置 deploy 目录下的 deploy.config.mjs 配置文件
 ```
 
 ### 2. 配置部署环境
 
-部署配置文件位于 deploy 文件夹下的`deploy.config.js`,
+部署配置文件位于 deploy 文件夹下的`deploy.config.mjs`,
 一般包含`dev`（测试环境）和`prod`（线上环境）两个配置，再有多余的环境配置形式与之类似，只有一个环境的可以删除另一个多余的配置（比如只有`prod`线上环境，可删除`dev`测试环境配置）。
 
 具体配置信息请参考配置文件注释：
@@ -78,7 +78,7 @@ export default {
 
 ### 3.查看部署命令
 
-配置好`deploy.config.js`，运行以下命令，查看部署命令
+配置好`deploy.config.mjs`，运行以下命令，查看部署命令
 
 ```sh
 deploy --help
@@ -105,7 +105,6 @@ deploy dev
 
 # ✔ cmd-deploy项目是否部署到测试环境？ yes
 # - npm run build
-#   正在打包中
 #   打包成功
 # - 打包成zip
 #   zip打包成功

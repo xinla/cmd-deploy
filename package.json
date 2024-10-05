@@ -1,6 +1,6 @@
 {
   "name": "cmd-deploy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "命令行一键自动化部署工具。",
   "type": "module",
   "import": "json",
