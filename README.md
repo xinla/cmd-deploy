@@ -96,7 +96,7 @@ deploy --help
 #   help [command]  display help for command
 ```
 
-### 4. 测试环境部署
+### 4. 测试环境部署，全流程示例
 
 测试环境部署采用的时`dev`的配置，执行命令会有一个确认，确认后进入部署流程，完成 6 步操作后，部署成功！！！
 
@@ -104,26 +104,26 @@ deploy --help
 deploy dev
 
 # ✔ cmd-deploy项目是否部署到测试环境？ yes
-
-# （1）npm run build
-# ⠋ 正在打包中
+# - npm run build
+#   正在打包中
 #   打包成功
-# （2）打包成zip
+# - 打包成zip
 #   zip打包成功
-# （3）连接139.224.22.197
+# - 连接139.224.22.197
 #   SSH连接成功
-# （4）上传zip至目录/usr/local/nginx/html/prod/pc
+# - 上传zip至目录/usr/local/nginx/html/prod/pc
 #   zip包上传成功
-# （5）开始解压zip包
+# - 开始解压zip包
 #   zip包解压成功
-# （6）开始删除本地zip包
+# - 开始删除本地zip包
 #   本地zip包删除成功
+# - 运行远程命令
+#   执行远程命令成功
 
-
-#  恭喜您，cmd-deploy项目测试环境部署成功了^_^
+#   恭喜您，cmd-deploy项目测试环境部署成功了^_^
 ```
 
-### 5. 线上环境部署
+### 5. 线上环境部署，按需配置示例，只使用执行远程命令功能
 
 线上环境部署采用的时`prod`的配置，部署流程和测试环境相同：
 
@@ -132,26 +132,16 @@ deploy prod
 
 # ✔ cmd-deploy项目是否部署到线上环境？ yes
 
-# （1）npm run build
-# ⠋ 正在打包中
-#   打包成功
-# （2）打包成zip
-#   zip打包成功
-# （3）连接139.224.22.197
+# - 连接139.224.22.197
 #   SSH连接成功
-# （4）上传zip至目录/usr/local/nginx/html/prod/pc
-#   zip包上传成功
-# （5）开始解压zip包
-#   zip包解压成功
-# （6）开始删除本地zip包
-#   本地zip包删除成功
+# - 执行远程命令
+#   执行远程命令成功
 
-
-#  恭喜您，cmd-deploy项目线上环境部署成功了^_^
+#   恭喜您，cmd-deploy项目线上环境部署成功了^_^
 ```
 
 如果项目对您有所帮助，欢迎 star，O(∩_∩)O，感谢支持~
 
 ## 鸣谢
 
-本项目主要由开源项目 [fe-deploy-cli](https://github.com/dadaiwei/fe-deploy-cli) 代码和依赖全面升级而来， node16 之前都是用的这个命令行工具，后面升级到 node18 之后，这个命令行工具不兼容，且最近版本已有五年之久，看 github 主页也没有升级维护的计划，所以用最新的 ES 规范和依赖重新写了，以方便 node18 后续的使用，在此感谢开源项目 fe-deploy-cli
+本项目主要由开源项目 [fe-deploy-cli](https://github.com/dadaiwei/fe-deploy-cli) 代码和依赖全面升级而来， node16 之前都是用的这个命令行工具，后面升级到 node18 之后，这个命令行工具不兼容，且最近版本已有五年之久，看 github 主页也没有升级维护的计划，所以用最新的 ES 规范和依赖重新写了，并新增支持后端部署功能，以方便 node18 后续的使用，在此感谢开源项目 fe-deploy-cli

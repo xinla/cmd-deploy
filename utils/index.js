@@ -95,9 +95,9 @@ async function checkDeployConfig(deployConfigPath) {
     const configs = []
     for (let key of keys) {
       if (config[key] instanceof Object) {
-        // if (!checkConfigScheme(key, config[key], privateKey)) {
-        //   return false
-        // }
+        if (!checkConfigScheme(key, config[key], privateKey)) {
+          return false
+        }
         config[key].command = key
         config[key].privateKey = privateKey
         config[key].passphrase = passphrase

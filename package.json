@@ -1,6 +1,6 @@
 {
   "name": "cmd-deploy",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0-rc.2",
   "description": "命令行一键自动化部署工具。",
   "type": "module",
   "import": "json",
@@ -27,7 +27,6 @@
     "commander": "^12.1.0",
     "inquirer": "^11.0.2",
     "node-ssh": "^13.2.0",
-    "ora": "^8.1.0",
     "semver": "^7.6.3"
   }
 }
