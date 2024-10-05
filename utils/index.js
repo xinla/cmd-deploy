@@ -1,6 +1,7 @@
 import * as fs from 'node:fs'
 import chalk from 'chalk'
 import semver from 'semver'
+import ora from 'ora'
 
 const DEPLOY_SCHEMA = {
   name: '',
@@ -21,8 +22,10 @@ const PRIVATE_KEY_DEPLOY_SCHEMA = {
 }
 
 // 开始部署日志
-function startLog(...content) {
-  console.log(chalk.magenta(...content))
+const spinner = ora('')
+function startLog(content) {
+  console.log(content)
+  spinner.start()
 }
 
 // 信息日志
@@ -32,6 +35,7 @@ function infoLog(...content) {
 
 // 成功日志
 function successLog(...content) {
+  spinner.stop()
   console.log(chalk.green(...content))
 }
 
