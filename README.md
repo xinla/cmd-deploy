@@ -1,6 +1,15 @@
-# cmd-deploy
+<h1 align="center">cmd-deploy</h1>
+<p align="center"><b>前后端命令行一键自动化部署工具</b></p>
+<p align="center">
+<a href="https://github.com/xinla/cmd-deploy" target="_blank"><img src="https://img.shields.io/badge/node-^v16-blue" alt="node version" /></a>
+<a href="https://github.com/xinla/cmd-deploy" target="_blank"><img src="https://img.shields.io/badge/license-MIT-g" alt="Package License" /></a>
+<a href="https://github.com/xinla/cmd-deploy" target="_blank"><img src="https://img.shields.io/badge/github-support star-yellow" alt="github" /></a>
+<a href="https://www.npmjs.com/package/cmd-deploy" target="_blank"><img src="https://img.shields.io/badge/npm-download-g" alt="npm" /></a>
+</p>
 
-前后端命令行一键自动化部署工具，支持测试、线上等多环境部署，支持环境配置扩展，配置完成后仅需一条命令即可完成整个部署流程。
+## 项目描述
+
+前后端命令行一键自动化部署工具。支持测试、线上等多环境部署，支持环境配置扩展，配置完成后仅需一条命令即可完成整个部署流程。
 
 ## 适用对象
 
@@ -9,6 +18,8 @@
 前提条件：能通过 ssh 连上服务器
 
 ## 安装
+
+首先本地需要 [node.js](https://nodejs.org/) (version >= 16) 环境
 
 全局安装 cmd-deploy
 

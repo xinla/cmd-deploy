@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as path from 'node:path'
 import * as fs from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import inquirer from 'inquirer'
 import { program } from 'commander'
 // import packageJson from '../package.json' assert { type: 'json' }
@@ -8,7 +9,7 @@ const deployPath = path.join(process.cwd(), './deploy')
 const configPath = `${deployPath}/deploy.config.mjs`
 import { checkNodeVersion, checkDeployConfig, underlineLog } from '../utils/index.js'
 
-const jsonData = fs.readFileSync(path.join(import.meta.dirname, '../package.json'), 'utf8')
+const jsonData = fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '../package.json'), 'utf8')
 const packageJson = JSON.parse(jsonData)
 
 const version = packageJson.version
